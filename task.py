@@ -35,14 +35,16 @@ class Account():
 	def withdraw(self,money):
 		self.balance-=money
 
-		
-client1 = Client("David")
-print(client1.name)
 
-bank1 = Bank("PKO")
-bank1.addAccount(client1)
 
-bank1.event(1,"deposit",100)
-print(bank1.event(1,"balance"))
-bank1.event(1,"withdraw",50)
-print(bank1.event(1,"balance"))
+if __name__ == "__main__":
+	client1 = Client("David")
+	print(client1.name)
+
+	bank1 = Bank("PKO")
+	bank1.addAccount(client1)
+
+	bank1.event(1,"deposit",100)
+	print(bank1.event(1,"balance"))
+	bank1.event(1,"withdraw",50)
+	print(bank1.event(1,"balance"))
